@@ -1,0 +1,28 @@
+{
+  "name": "react-redux-polls",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "��#\u0000 \u0000r\u0000e\u0000a\u0000c\u0000t\u0000-\u0000r\u0000e\u0000d\u0000u\u0000x\u0000-\u0000p\u0000o\u0000l\u0000l\u0000s\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinoxas/react-redux-polls.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinoxas/react-redux-polls/issues"
+  },
+  "homepage": "https://github.com/dinoxas/react-redux-polls#readme"
+}
