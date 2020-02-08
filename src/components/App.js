@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Dashboard from "./Dashboard";
 import Leaderboard from "./Leaderboard";
 import AddPoll from "./AddPoll";
+import Poll from "./Poll";
 import LoadingBar from "react-redux-loading";
 
 class App extends Component {
@@ -14,7 +15,9 @@ class App extends Component {
     return (
       <div>
         <LoadingBar />
-        {this.props.loading === true ? null : <AddPoll />}
+        {this.props.loading === true ? null : (
+          <Poll match={{ params: { id: "8xf0y6ziyjabvozdd253nd" } }} />
+        )}
       </div>
     );
   }
