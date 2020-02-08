@@ -1,10 +1,63 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { getPercentage } from "../utils/helpers";
+
+const getVoteKeys = () => ["aVotes", "bVotes", "cVotes", "dVotes"];
 
 class Poll extends Component {
-  state = {};
+  handleAnswer = answer => {
+    const { poll, authedUser } = this.props;
+
+    this.answered = true;
+    console.log("Add Answer:", answer);
+  };
   render() {
-    return <div className="poll-container">{JSON.stringify(this.props)}</div>;
+    if (this.props.poll === null) {
+      return <p>This poll does not exist.</p>;
+    }
+
+    const { poll, vote, authorAvatar } = this.props;
+
+    const totalVotes = getVoteKeys().reduce(
+      (total, key) => total + poll[key].length,
+      0
+    );
+
+    return (
+      <div className="poll-container">
+        <h1 className="question">{poll.question}</h1>
+        <div className="poll-author">
+          By <img src={authorAvatar} alt="Author's avatar" />
+        </div>
+        <ul>
+          {["aText", "bText", "cText", "dText"].map(key => {
+            const count = poll[key[0] + "Votes"].length;
+            return (
+              <li
+                onClick={() => {
+                  if (vote === null && !this.answered) {
+                    this.handleAnswer(key[0]);
+                  }
+                }}
+                className={`option ${vote === key[0] ? "chosen" : ""}`}
+                key={key}
+              >
+                {vote === null ? (
+                  poll[key]
+                ) : (
+                  <div className="result">
+                    <span>{poll[key]}</span>
+                    <span>
+                      {getPercentage(count, totalVotes)}% ({count})
+                    </span>
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
   }
 }
 
@@ -19,7 +72,7 @@ function mapStateToProps({ authedUser, polls, users }, { match }) {
   }
 
   // reduce vote down to a signle value eg: a, b, c or d
-  const vote = ["aVotes", "bVotes", "cVotes", "dVotes"].reduce((vote, key) => {
+  const vote = getVoteKeys().reduce((vote, key) => {
     if (vote !== null) {
       // grab the first letter eg: a, b, c or d
       return vote[0];
