@@ -18,6 +18,7 @@ class Poll extends Component {
       })
     );
   };
+
   render() {
     if (this.props.poll === null) {
       return <p>This poll does not exist.</p>;
