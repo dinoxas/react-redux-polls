@@ -15,19 +15,22 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "description": "��#\u0000 \u0000r\u0000e\u0000a\u0000c\u0000t\u0000-\u0000r\u0000e\u0000d\u0000u\u0000x\u0000-\u0000p\u0000o\u0000l\u0000l\u0000s\u0000\r\u0000 \u0000",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dinoxas/react-redux-polls.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dinoxas/react-redux-polls/issues"
-  },
-  "homepage": "https://github.com/dinoxas/react-redux-polls#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
