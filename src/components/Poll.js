@@ -34,10 +34,15 @@ class Poll extends Component {
     return (
       <div className="poll-container">
         <h1 className="question">{poll.question}</h1>
-        <div className="poll-author">
-          By <img src={authorAvatar} alt="Author's avatar" />
+        <div className="poll-author mb-3">
+          By{" "}
+          <img
+            className="img-thumbnail ml-2"
+            src={authorAvatar}
+            alt="Author's avatar"
+          />
         </div>
-        <ul>
+        <ul className="list-group">
           {["aText", "bText", "cText", "dText"].map(key => {
             const count = poll[key[0] + "Votes"].length;
             return (
@@ -47,7 +52,9 @@ class Poll extends Component {
                     this.handleAnswer(key[0]);
                   }
                 }}
-                className={`option ${vote === key[0] ? "chosen" : ""}`}
+                className={`list-group-item list-group-item-action ${
+                  vote === key[0] ? "bg-info text-white font-weight-bold" : ""
+                }`}
                 key={key}
               >
                 {vote === null ? (

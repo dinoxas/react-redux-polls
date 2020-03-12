@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { handleInitialData } from "../actions/shared";
 import { connect } from "react-redux";
+import Header from "./Header";
 import Dashboard from "./Dashboard";
 import Leaderboard from "./Leaderboard";
 import AddPoll from "./AddPoll";
@@ -17,7 +18,9 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <LoadingBar />
+          <LoadingBar style={{ backgroundColor: "#00d8ff", zIndex: "9999" }} />
+
+          <Header />
 
           <div className="container">
             <Nav />

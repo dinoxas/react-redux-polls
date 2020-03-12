@@ -25,7 +25,7 @@ class Dashboard extends Component {
     const list = showAnswered === true ? answered : unanswered;
     return (
       <div>
-        <div className="dashboard-toggle">
+        <div className="dashboard-toggle mb-5">
           <button
             style={{
               textDecoration: showAnswered === false ? "underline" : "none"
@@ -44,10 +44,15 @@ class Dashboard extends Component {
             Answered
           </button>
         </div>
-        <ul className="dashboard-list">
+        <ul className="list-unstyled">
           {list.map(poll => (
             <li key={poll.id}>
-              <Link to={`polls/${poll.id}`}>{poll.question}</Link>
+              <Link
+                className="h4 mb-3 d-inline-block text-dark"
+                to={`polls/${poll.id}`}
+              >
+                {poll.question}
+              </Link>
             </li>
           ))}
         </ul>

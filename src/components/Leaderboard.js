@@ -3,12 +3,16 @@ import { connect } from "react-redux";
 
 function Leaderboard({ users }) {
   return (
-    <ol>
+    <ol className="list-unstyled">
       {users.map(user => (
-        <li className="user" key={user.id}>
-          <img src={user.avatarURL} alt={`Avatar for ${user.name}`} />
+        <li className="user mb-3" key={user.id}>
+          <img
+            className="img-thumbnail"
+            src={user.avatarURL}
+            alt={`Avatar for ${user.name}`}
+          />
           <div>
-            <h1>{user.name}</h1>
+            <h3>{user.name}</h3>
             <p>{user.polls} Polls</p>
             <p>{user.answers} Answers</p>
           </div>

@@ -32,66 +32,78 @@ class AddPoll extends Component {
   render() {
     const { question, a, b, c, d } = this.state;
     return (
-      <form className="add-form" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <h3>What is your question?</h3>
-        <input
-          className="input"
-          onChange={this.handleInputChange}
-          name="question"
-          type="text"
-          id="question"
-          value={question}
-        />
 
+        <div className="form-group">
+          <label htmlFor="question">Question</label>
+          <input
+            className="form-control"
+            onChange={this.handleInputChange}
+            name="question"
+            type="text"
+            id="question"
+            value={question}
+          />
+        </div>
         <h3>What are the options?</h3>
-        <label className="label" htmlFor="a">
-          A.
-        </label>
-        <input
-          className="input"
-          id="a"
-          value={a}
-          onChange={this.handleInputChange}
-          name="a"
-          type="text"
-        />
 
-        <label className="label" htmlFor="b">
-          B.
-        </label>
-        <input
-          className="input"
-          id="b"
-          value={b}
-          onChange={this.handleInputChange}
-          name="b"
-          type="text"
-        />
+        <div className="form-group">
+          <label htmlFor="a">Option A</label>
+          <input
+            className="form-control"
+            id="a"
+            value={a}
+            onChange={this.handleInputChange}
+            name="a"
+            type="text"
+          />
+        </div>
 
-        <label className="label" htmlFor="c">
-          C.
-        </label>
-        <input
-          className="input"
-          id="c"
-          value={c}
-          onChange={this.handleInputChange}
-          name="c"
-          type="text"
-        />
-
-        <label className="label" htmlFor="d">
-          D.
-        </label>
-        <input
-          className="input"
-          id="d"
-          value={d}
-          onChange={this.handleInputChange}
-          name="d"
-          type="text"
-        />
-        <button className="btn" type="submit" disabled={this.isDisabled()}>
+        <div className="form-group">
+          <label className="label" htmlFor="b">
+            Option B
+          </label>
+          <input
+            className="form-control"
+            id="b"
+            value={b}
+            onChange={this.handleInputChange}
+            name="b"
+            type="text"
+          />
+        </div>
+        <div className="form-group">
+          <label className="label" htmlFor="c">
+            Option C
+          </label>
+          <input
+            className="form-control"
+            id="c"
+            value={c}
+            onChange={this.handleInputChange}
+            name="c"
+            type="text"
+          />
+        </div>
+        <div className="form-group">
+          <label className="label" htmlFor="d">
+            Option D
+          </label>
+          <input
+            className="form-control"
+            id="d"
+            value={d}
+            onChange={this.handleInputChange}
+            name="d"
+            type="text"
+          />
+        </div>
+        <button
+          className="btn btn-dark btn-lg mb-3"
+          type="submit"
+          disabled={this.isDisabled()}
+        >
           Submit
         </button>
       </form>
