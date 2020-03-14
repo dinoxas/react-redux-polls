@@ -5,7 +5,7 @@ Simple polls application with the following basic functionalities:
 - Answer polls
 - View the leaderboard
 
-Note: Open the console or use the Redux chrome Add-on to see the current action and state of the app.
+Note: Open the console or use the Redux DevTools to see the current action and state of the app.
 
 [Demo](https://dinoxas-react-redux-polls.netlify.com)
 
