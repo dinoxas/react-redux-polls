@@ -13,7 +13,7 @@ const Header = () => {
         <ul className="navbar-nav ml-auto text-light d-inline-block">
           <li className="nav-item">
             <FaReact color="#00d8ff" size="40" />{" "}
-            <FaPoll color="#00d8ff" size="40" />
+            <FaPoll color="#ffffff" size="40" />
           </li>
         </ul>
       </div>

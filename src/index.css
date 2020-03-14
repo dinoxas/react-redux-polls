@@ -55,10 +55,12 @@ a {
 }
 
 .poll-container {
-  width: 60%;
-  margin: 0px auto;
   display: flex;
   flex-direction: column;
+}
+
+.poll-container .list-group-item {
+  cursor: pointer;
 }
 
 .question {
@@ -84,7 +86,6 @@ a {
 
 @media (max-width: 500px) {
   .poll-container {
-    width: 95%;
     flex-direction: column;
   }
 }

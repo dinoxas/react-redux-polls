@@ -2,7 +2,7 @@ let users = {
   dinoxas: {
     id: "dinoxas",
     name: "Dino Hassiotis",
-    avatarURL: "https://avatars0.githubusercontent.com/u/11277832?s=460&v=4",
+    avatarURL: "https://avatars0.githubusercontent.com/u/11277832",
     answers: {
       "8xf0y6ziyjabvozdd253nd": "a",
       "6ni6ok3ym7mf1p33lnez": "a",
@@ -11,10 +11,10 @@ let users = {
     },
     polls: ["8xf0y6ziyjabvozdd253nd", "am8ehyc8byjqgar0jgpub9"]
   },
-  tylermcginnis: {
-    id: "tylermcginnis",
-    name: "Tyler McGinnis",
-    avatarURL: "https://avatars1.githubusercontent.com/u/2933430?s=460&v=4",
+  mpj: {
+    id: "mpj",
+    name: "Mattias Petter Johansson",
+    avatarURL: "https://avatars3.githubusercontent.com/u/17815",
     answers: {
       vthrdm985a262al8qx3do: "a",
       xj352vofupe1dqz9emx13r: "a"
@@ -24,7 +24,7 @@ let users = {
   dan_abramov: {
     id: "dan_abramov",
     name: "Dan Abramov",
-    avatarURL: "https://avatars0.githubusercontent.com/u/810438?s=400&v=4",
+    avatarURL: "https://avatars0.githubusercontent.com/u/810438",
     answers: {
       xj352vofupe1dqz9emx13r: "a",
       vthrdm985a262al8qx3do: "d",
@@ -104,7 +104,7 @@ let polls = {
   loxhs1bqm25b708cmbf3g: {
     id: "loxhs1bqm25b708cmbf3g",
     question: "Which artist do you prefer?",
-    author: "tylermcginnis",
+    author: "mpj",
     timestamp: 1482579767190,
     a: {
       text: "Chance the Rapper",
@@ -126,11 +126,11 @@ let polls = {
   vthrdm985a262al8qx3do: {
     id: "vthrdm985a262al8qx3do",
     question: "Where is the best place to live?",
-    author: "tylermcginnis",
+    author: "mpj",
     timestamp: 1489579767190,
     a: {
       text: "Eden, Utah",
-      votes: ["tylermcginnis"]
+      votes: ["mpj"]
     },
     b: {
       text: "Kauai, HI",
@@ -160,7 +160,7 @@ let polls = {
     },
     c: {
       text: "Oprah Winfrey",
-      votes: ["tylermcginnis"]
+      votes: ["mpj"]
     },
     d: {
       text: "Dwayne Johnson",
